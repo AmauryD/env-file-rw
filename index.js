@@ -1,5 +1,7 @@
 const fs = require('fs');
 const dotenv = require('dotenv');
+const utils = require('util');
+const writeFile = utils.promisify(fs.writeFile);
 
 module.exports = class EnvFileWriter {
     /**
@@ -60,7 +62,7 @@ module.exports = class EnvFileWriter {
      * @param data
      */
     write(data) {
-        return fs.writeFile(this.fileName,data);
+        return writeFile(this.fileName,data);
     }
 
     /**
@@ -81,7 +83,7 @@ module.exports = class EnvFileWriter {
         for (let key in this.dotenvContent)
             finalContent += `${key} = ${this.dotenvContent[key]}${line_separator}`;
 
-        return fs.writeFile(this.fileName,finalContent);
+        return writeFile(this.fileName,finalContent);
     }
 
     /**
