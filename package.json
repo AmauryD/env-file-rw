@@ -27,7 +27,6 @@
   },
   "homepage": "https://github.com/AmauryD/env-file-rw#readme",
   "dependencies": {
-    "dotenv": "^8.0.0",
-    "mocha": "^6.2.0"
+    "dotenv": "^8.0.0"
   }
 }
