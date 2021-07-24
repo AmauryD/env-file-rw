@@ -1,13 +1,17 @@
 {
   "name": "env-file-rw",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "Read and write from .env file",
-  "main": "index.js",
+  "main": "dist/index.js",
   "directories": {
     "test": "test"
   },
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "mocha"
+    "prepublish": "tsc",
+    "test": "nyc mocha 'test/**/*.ts' --require ts-node/register",
+    "lint": "eslint . --ext .ts",
+    "postpublish": "rm -rf dist"
   },
   "repository": {
     "type": "git",
@@ -26,7 +30,17 @@
     "url": "https://github.com/AmauryD/env-file-rw/issues"
   },
   "homepage": "https://github.com/AmauryD/env-file-rw#readme",
-  "dependencies": {
-    "dotenv": "^8.0.0"
+  "dependencies": {},
+  "devDependencies": {
+    "@types/mocha": "^9.0.0",
+    "@types/node": "^16.4.1",
+    "@typescript-eslint/eslint-plugin": "^4.28.4",
+    "@typescript-eslint/parser": "^4.28.4",
+    "dotenv": "^10.0.0",
+    "eslint": "^7.31.0",
+    "mocha": "^9.0.2",
+    "nyc": "^15.1.0",
+    "ts-node": "^10.1.0",
+    "typescript": "^4.3.5"
   }
 }

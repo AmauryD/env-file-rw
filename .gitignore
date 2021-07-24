@@ -155,3 +155,7 @@ typings/
 
 # DynamoDB Local files
 .dynamodb/
+
+playground/
+
+dist/
