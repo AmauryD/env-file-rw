@@ -7,6 +7,7 @@ Edit and read from .env files
 - Write key/value to .env file
 - Preserve comments
 - Typescript
+- 0 dependencies
 
 # Sync example
 ```js
