@@ -1,5 +1,5 @@
-# env-file-rw
-Edit and read from .env files
+# env-file-rw [![tests](https://github.com/AmauryD/env-file-rw/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/AmauryD/env-file-rw/actions/workflows/main.yml)
+Edit and read from .env files 
 
 # Features
 
