@@ -11,7 +11,7 @@ Edit and read from .env files
 
 # Sync example
 ```js
-const EnvFileWriter = require("env-file-rw");
+const EnvFileWriter = require("env-file-rw").default;
 const envFileWriter = new EnvFileWriter("test.env");
 
 envFileWriter.get("HELLO","NOT WORLD");// NOT WORLD BY DEFAULT
@@ -26,7 +26,7 @@ envFileWriter.saveSync();
 
 # Async example
 ```js
-const EnvFileWriter = require("env-file-rw");
+const EnvFileWriter = require("env-file-rw").default;
 const envFileWriter = new EnvFileWriter("test.env",false); // false prevents direct sync parsing
 
 // open the file and parse it
