@@ -1,0 +1,7 @@
+examples
+.github
+test
+.nyc_output
+.eslintignore
+.eslintrc
+src
